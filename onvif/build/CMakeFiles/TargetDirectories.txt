@@ -1,0 +1,3 @@
+/home/allen/ipcamera/onvif/build/CMakeFiles/rebuild_cache.dir
+/home/allen/ipcamera/onvif/build/CMakeFiles/onvif.dir
+/home/allen/ipcamera/onvif/build/CMakeFiles/edit_cache.dir
