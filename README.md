@@ -1,3 +1,5 @@
+##build
+
 1. sudo apt install libtheora-dev libvorbis-dev
 2. download ffmpeg-4.3, unzip, cd ffmpeg-4.3
 3.  ./configure --prefix=/usr/local/ffmpeg --enable-shared --enable-libfdk-aac --enable-gpl --enable-nonfree --enable-postproc --enable-avfilter --enable-pthreads --enable-libmp3lame --enable-libtheora --enable-libvorbis --enable-libx264 --enable-libxvid --enable-decoder=h264 --enable-encoder=libx264
@@ -60,6 +62,15 @@ sudo ldconfig
 
 15. RUN: if ffmpeg was installed into /usr/local/ffmpeg/lib:
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/ffmpeg/lib
+
+16. change onvif  source code: 
+stdsoap2.h:
+#define WITH_OPENSSL
+comment out #include <xlocale.h>
+
+Searched the system for this file, found locale.h rather than xlocale.h
+Searched the web to read about both. Found out that xlocale.h is the threadsafe version of locale.h
+
 
 
 
